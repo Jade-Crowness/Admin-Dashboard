@@ -1,2 +1,4 @@
 # Admin-Dashboard
-A dashboard created using html and css (using grid)
+Task : Creating Dashboard Using Grid.
+Tools : Html and CSS (Only Grid).
+Responsive : No.
