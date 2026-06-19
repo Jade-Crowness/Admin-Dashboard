@@ -10,7 +10,39 @@ body {
     grid-template-columns: 250px 1fr;
 }
 
-#header-content {
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    gap: 15px;
+    text-align: center;
+}
+
+button {
+    width: 60px;
+    padding: 0px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    text-align: center;
+    border-radius: 25px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#profile-name svg:hover, img {
+    cursor: pointer;
+}
+
+.sidebar-header:hover > *, .sidebar-middle-contents:hover > *, .sidebar-end-contents:hover > * {
+    cursor: pointer;
+}
+
+#sidebar-content {
     background-color: #043676;
     height: 100vh;
     width: 250px;
@@ -45,7 +77,77 @@ body {
 }
 
 svg:not(.sidebar-dashboard-svg) {
-    height: 40px;
+    height: 30px;
     width: auto;
     fill: #eee2df;
+}
+
+#main-content {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+}
+
+#main-content-header {
+    background-color: pink;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px 20px 5px 20px;
+    height: 200px;
+    align-items: center;
+}
+
+#search {
+    width: 500px;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+input[type="search"]:focus {
+    outline: 2px solid red;
+}
+
+#search-and-others {
+    display: grid;
+    grid-template-columns: 550px 1fr;
+    gap: 200px;
+}
+
+#search-icon {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    justify-items: center;
+    align-items: center;
+}
+
+#profile-name {
+    display: grid;
+    grid-template-columns: 40px 80px 110px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+img {
+    width: 60px;
+    height: auto;
+    border-radius: 25px;
+    background-color: red;
+}
+
+.name {
+    font-weight: bold;
+}
+
+#buttons-and-others {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+}
+
+#buttons-and-others-left {
+    display: grid;
+    grid-template-columns: 60px 110px;
+    gap: 10px;
+    align-items: center;
 }
