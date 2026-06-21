@@ -10,13 +10,22 @@ body, html {
     width: 100vw;
 }
 
+input {
+    padding: 0;
+    margin: 0;
+    border: 2px solid sandybrown;
+    height: 30px;
+    border-radius: 25px;
+    width: 500px;
+}
+
 svg {
     height: 60px;
     width: auto;
     fill: #fcedd3;
 }
 
-#sidebar-second-row > div > svg, #sidebar-third-row > div > svg {
+#sidebar-second-row > div > svg, #sidebar-third-row > div > svg, #search > svg {
     height: 30px;
     width: auto;
     fill: #fcedd3;
@@ -28,7 +37,7 @@ svg {
 
 body {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 250px 1fr 250px;
     grid-template-rows: 200px 1fr;
 }
 
@@ -60,4 +69,23 @@ body {
     gap: 10px;
     padding-left: 15px;
     cursor: pointer;
+}
+
+#header {
+    grid-column: 2 / 4;
+    padding: 25px 50px 25px 50px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#search {
+    display: grid;
+    grid-template-columns: 30px 250px;
+    gap: 30px;
+    align-items: center;
+}
+
+#header-first-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
