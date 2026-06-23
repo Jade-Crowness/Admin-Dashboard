@@ -10,13 +10,19 @@ body, html {
     width: 100vw;
 }
 
-input {
+input[type="search"] {
     padding: 0;
     margin: 0;
-    border: 2px solid sandybrown;
     height: 30px;
     border-radius: 25px;
     width: 500px;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+}
+
+input[type="search"]:focus {
+    box-shadow: 0 0 0 3px #fcedd3;
 }
 
 svg {
@@ -25,13 +31,13 @@ svg {
     fill: #fcedd3;
 }
 
-#sidebar-second-row > div > svg, #sidebar-third-row > div > svg, #search > svg {
+#sidebar-second-row > div > svg, #sidebar-third-row > div > svg, #search > svg, .svg-height {
     height: 30px;
     width: auto;
     fill: #fcedd3;
 }
 
-.text {
+.text-bold {
     font-weight: bold;
 }
 
@@ -76,6 +82,7 @@ body {
     padding: 25px 50px 25px 50px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    background-color: cadetblue;
 }
 
 #search {
@@ -88,4 +95,99 @@ body {
 #header-first-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 500px;
+}
+
+#header-first-row-second-column {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30px 60px 1fr;
+    gap: 20px;
+}
+
+#header-first-row-second-column > svg {
+    cursor: pointer;
+}
+
+#header-first-row-second-column > .text-bold, #header-second-row-first-column > .text-bold {
+    color: #f3c8dd;
+    text-shadow: 0 0 10px #f3c8dd;
+}
+
+img {
+    height: 60px;
+    width: auto;
+    background-color: palevioletred;
+    border-radius: 30px;
+}
+
+#header-second-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#header-second-row-first-column {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+#header-second-row-second-column {
+    display: grid;
+    justify-content: end;
+}
+
+#header-second-row-second-column ul {
+    display: grid;
+    gap: 70px;
+    grid-template-columns: repeat(3, 60px);
+    list-style-type: none;
+    
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 30px;
+    width: 80px;
+    border-radius: 25px;
+    align-self: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1rem repeat(3, 1fr);
+    padding: 15px;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.card {
+    display: grid;
+    align-items: center;
+    text-wrap: wrap;
+    overflow: hidden;
+    height: 200px;
+    width: 300px;
+    padding: 15px;
+    background-color: bisque;
+    border-radius: 15px;
+    border-left: 8px solid pink;
+    grid-template-rows: 1rem 1fr 1fr;
+    gap: 10px;
+}
+
+#main-title {
+    grid-row: 1 / 2;
+    grid-column: span 2;
+    justify-self: center;
 }
